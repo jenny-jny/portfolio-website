@@ -1,0 +1,331 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+/*Colors used:
+
+Text color(dark gray): #2b2b2b;
+
+Background color(light gray): #d3d3d3;
+
+Primary color(purple): #357b70;
+Secondary color(orange): #e0b354;
+*/
+
+/* CSS variables*/
+
+/* General */
+*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body{
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Header */
+.page-header{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  /* margin-bottom: 20px;  */
+}
+.page-header__item{
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+.page-header__item:last-child{
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+/* Navigation */
+.navigation-list, .unordered-list{
+  list-style-type: none;
+  padding: 0;
+}
+.navigation-list li{
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+}
+.navigation-list li:first-child{
+  margin-left: 0;
+}
+.navigation-list__item--active{
+  text-decoration: none;
+}
+
+/* Footer */
+.page-footer{
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* Main tag*/
+.profile{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Main tag without portrait */
+.index, .about, .contact{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Links */
+a{
+  color: #357b70;
+}
+a:hover, a:focus{
+  text-decoration: none;
+}
+a:active{
+  color: #489c79;
+}
+a:visited{
+  color: #05676e;
+}
+
+/* Buttons */
+button{
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3); 
+  -webkit-transition: opacity 0.2s; 
+  transition: opacity 0.2s;
+}
+.button{
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3); 
+  -webkit-transition: opacity 0.2s; 
+  transition: opacity 0.2s;
+}
+.button{
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+button:hover, .button:hover, button:focus, .button:focus{
+  cursor: pointer;
+  opacity: 0.8;
+}
+.default_link_button{
+  -ms-flex-item-align: start;
+      align-self: flex-start; 
+}
+.button_secondary{
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+/* Portrait */
+.profile__portrait{
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  float: left;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+/* About page and "Download my CV" button */
+.about, .button{
+  text-align: center;
+}
+
+/* Hometown illustration */
+@-webkit-keyframes color-change{
+  0%{
+    fill: #edc655;
+  }
+  50%{
+    fill: #fcffad;
+  }
+  100%{
+    fill: #f76414;
+  }
+}
+@keyframes color-change{
+  0%{
+    fill: #edc655;
+  }
+  50%{
+    fill: #fcffad;
+  }
+  100%{
+    fill: #f76414;
+  }
+}
+@-webkit-keyframes cloud-move{
+  from{
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to{
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+@keyframes cloud-move{
+  from{
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to{
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+@-webkit-keyframes cloud-move-reverse{
+  from{
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to{
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+@keyframes cloud-move-reverse{
+  from{
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to{
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+.sun{
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
+}
+.cloud-front{
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+}
+.cloud-back{
+  -webkit-animation: 30s cloud-move-reverse infinite alternate linear;
+          animation: 30s cloud-move-reverse infinite alternate linear;
+}
+
+/* Tables */
+table{
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/* Work grid */
+@supports (display: grid){
+  .project-list{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+}
+.project-list__item{
+  display: inline-block;
+  width: 25%;
+}
+/* Change background-color in .project-list__item to a shade darker than body background-color  */
+.project-list__item{
+  background-color: lightgray;
+  width: auto;
+  min-height: auto;
+  padding: 10px;
+  margin: 0;
+}
+.project-list__item:last-child {
+  -ms-grid-column: 4;
+  grid-column: 4 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+/* Required asterisk */
+.asterisk{
+  color: red;
+}
+
+/* Media queries (responsive design) go at the very end of CSS file */
+@media all and (max-width: 500px){
+  .project-list{
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .project-list{
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px){
+  .project-list{
+    grid-gap: 10px;
+  }
+  .project-list__item:last-child{
+    grid-column: auto;
+    grid-row: auto;
+  }
+  h1{
+    font-size: 22px;
+  }
+}
