@@ -233,12 +233,17 @@ table{
   grid-row: 1 / 3;
 }
 
+/* Contact page */
 .contact-page__contact-me{
   margin-bottom: 30px;
 }
 /* Required asterisk */
 .asterisk{
   color: var(--red);
+}
+.error-message{
+  color: red;
+  font-size: 0.8em;
 }
 
 /* Media queries (responsive design) go at the very end of CSS file */
