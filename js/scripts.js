@@ -48,7 +48,7 @@
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if(validateEmail){
+    if(validateEmail()){
       alert('Success!');
     }
   });
