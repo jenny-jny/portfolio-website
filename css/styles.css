@@ -158,19 +158,16 @@ button:hover, .button:hover, button:focus, .button:focus{
 .about .angle-brackets{
   color: gray;
 }
-
 /* About page child span*/
 .about span{
   background-color: var(--dark-grey);
   color: #007acc;
 }
-
 /* About page and "Download my CV" button */
 .about, .button{
   text-align: center;
   margin-bottom: 40px;
 }
-
 /* Hometown illustration */
 svg{
   margin-bottom: 30px;
@@ -211,7 +208,6 @@ svg{
 .cloud-back{
   animation: 30s cloud-move-reverse infinite alternate linear;
 }
-
 /* Tables */
 table{
   align-self: center;
@@ -247,6 +243,12 @@ table{
   grid-column: 3 / 3;
   grid-row: 1 / 4;
 } */
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+}
 
 /* Contact page */
 .contact-page__contact-me{
