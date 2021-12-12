@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study - MyFlix React Client</title>
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="page-header">
+    <img class="page-header__item" src="img/logo.jpg" alt="My logo" />
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="profile">
+    <section>
+      <h1>Case Study - MyFlix React Client</h1>
+      <h2>Overview</h2>
+      <p>
+        MyFlix React Client provided users with access to information about different movies, directors, and genres. Users were able to sign up, update their personal information, and save their favorite movies. 
+      </p>
+      <h2>Purpose and Context</h2>
+      <p>
+        MyFlix React Client was the client-side of MyFlix web app. It allowed MyFlix users to interact with the server-side of the web app, specifically the REST API and MongoDB database. I built it as a personal portfolio project while studying in CareerFoundry’s Full-Stack Web Development Immersion Program. 
+      </p>
+      <h2>Objective</h2>
+      <p>
+        To demonstrate my mastery of React, a JavaScript library, I built the MyFlix React Client as a user interface to make requests to and receive responses from the server-side of MyFlix web app. 
+      </p>
+      <div class="row">
+        <div class="column">
+          <h2>Duration</h2>
+          <p>1 month</p>
+          <h2>Credits</h2>
+          <p>Role: Frontend developer</p>
+        </div>
+        <div class="column">
+          <h2>Tools</h2>
+          <ul class="unordered-list">
+            <li>JavaScript ES6</li>
+            <li>React</li>
+            <li>React Bootstrap</li>
+            <li>Redux</li>
+            <li>Postman</li>
+            <li>Netlify</li>
+          </ul>
+        </div>
+      </div>
+      <h2>Process</h2>
+      <p>
+        To structure MyFlix React Client’s code base, I decided to implement the Model View Controller (MVC) architecture because it was the industry standard for setting up the client-side of web apps. The benefit MVC offered was that it decoupled or separated the app into specific parts and roles, making the code base easier to maintain and refactor later. For example, I used MVC architecture for the toggle favorite feature that allowed users to save and remove movies from “My Favorite Movies” list. The Model first loaded and held “My Favorite Movies” from server-side data. The View displayed the movies, each with a favorite toggle, and triggered the Controller when the user favorited or unfavorited a movie. The Controller then sent the user’s request to favorite or unfavorite to the Model and instructed it to refresh. The process started over again with the Model fetching and holding the updated “My Favorite Movies” and so forth. Later in the development process, I incorporated another design pattern to mitigate some problems that the MVC architecture proposed as my app evolved. 
+      </p>
+      <figure>
+        <img src="img/work/case_study/mvc_architecture.png" alt="The MVC Architecture"/>
+        <figcaption>Figure 1. The MVC Architecture. Credit: CareerFoundry</figcaption>
+      </figure>
+      <p>
+        React came with a design of having a component’s data reside in the component’s state and props. Therefore, I was able to dynamically change and control data within the components. I used State to temporarily hold data of a movies array to display in the main view component. I used Props to pass data from the main view component’s movies state as single movie descriptions to its child component. State and Props facilitated the implementation of React user interface consisting of granular components, making it easier to reuse smaller components because of the transferability of data. 
+      </p>
+      <p>
+        As business demands of MyFlix React Client continued to grow, managing the ever-changing state became hard with only MVC architecture. Because updates in MVC could flow in different directions between the Controller, the View, and the Model, frequently there were messy cascading effects across the code base. I decided to implement Redux, as a result, to provide the benefit of making state mutations predictable by imposing a unidirectional data flow model. Another benefit of implementing Redux was that it centralized global state in a single store as its source of truth, and as the state in a Redux app was read-only, the only way to change it was with actions in the store. This ensured no direct write to the state by views and network callbacks, eliminating side effects from the MVC architecture. I converted the movies array in the main view to implement Redux. The state of the app essentially needs to change to accommodate a change that happens in the app. To begin, the app’s user interface created an action event that proposed to initialize the movies state with data and dispatched the action. The reducer then performed the action by taking the previous state and the initialization action that modified it and returned the new movies state. The store, which I created in the top-most file of my app, managed this process of changing state, and passed the new state to all the views and components in the app. 
+      </p>
+      <figure>
+        <img src="img/work/case_study/redux_lifecycle.png" alt="The Redux Lifecycle"/>
+        <figcaption>Figure 2. The Redux Lifecycle. Credit: CareerFoundry</figcaption>
+      </figure>
+      <h2>Challenges</h2>
+      <p>
+        For choosing the appropriate library or framework to use for building MyFlix React Client, I compared specifications of React, Angular, and Vue to my project requirements. I picked React because it offered the most advantages out of all three. First, code written in React is declarative, making it easy to read and maintain. Second, React has its virtual DOM, which ensured fast rendering of views. This made MyFlix React Client performant for handling heavy-loaded and dynamic data on the client-side in terms of scale and accommodating additional components (views) and functionalities without the risk of entropy in terms of scope. Third, React’s component-based structure represented the View displayed to users, therefore, aligning well with the MVC architecture. Fourth, React's developer toolset allowed me to observe reactive component hierarchies, discover child and parent components, and inspect their current state and props within the browser (Chrome and Firefox). Finally, React had well-maintained documentation online and had support from a wide community of developers, especially from Facebook, which made it easy to troubleshoot and find solutions. Nevertheless, I practiced my TypeScript by building the Angular version of MyFlix Client (link here) to expand my programming language knowledge. I didn’t choose to build with Vue because it was less in-demand than React or Angular and only a smaller team of developers backed it.  
+      </p>
+      <h2>Conclusion</h2>
+      <p>
+        MyFlix React Client was a single-page web app built using React that facilitated user requests and rendered the response from the server-side via user interface views. MyFlix React Client requested the entire web app from the server, then rendered one main view that only switched between subviews, making it more performant than downloading from the server each time a user made a request. The subviews included login view, user registration view, reusable movie card that displayed brief information about a movie, movie view that displayed detailed information about a movie, and profile view where the user customized personal information. 
+      </p>
+      <figure>
+        <img src="img/work/case_study/spa.gif" alt="A Single-Page Application" class="gif"/>
+        <figcaption>Figure 3. A Single-Page Application. Credit: CareerFoundry</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <p class="social-media__item">Find me on</p>
+    <nav class="social-media__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a role="menuitem" href="https://github.com/jenny-jny" target="_blank">
+            <img src="img/github_icon.svg" alt="GitHub logo" />
+          </a>
+        </li>
+        <!-- <li role="presentation">
+          <a role="menuitem">
+            <img src="http://via.placeholder.com/30x30" alt="Twitter logo" />
+          </a>
+        </li> -->
+        <li role="presentation">
+          <a role="menuitem" href="https://www.linkedin.com/in/jenny-jianing-yu-670h2b519/" target="_blank">
+            <img src="img/linkedin_icon.svg" alt="LinkedIn logo" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
