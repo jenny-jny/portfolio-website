@@ -154,6 +154,17 @@ button:hover, .button:hover, button:focus, .button:focus{
   margin-top: 30px;
 }
 
+/* About page child .angle-brackets*/
+.about .angle-brackets{
+  color: gray;
+}
+
+/* About page child span*/
+.about span{
+  background-color: var(--dark-grey);
+  color: #007acc;
+}
+
 /* About page and "Download my CV" button */
 .about, .button{
   text-align: center;
