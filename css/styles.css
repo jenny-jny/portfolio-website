@@ -13,8 +13,7 @@ Secondary color(orange): #e0b354;
   --background-color: white;
   --primary-color: #357b70;
   --primary-color-active: #489c79;
-  /* --primary-color-visited: #05676e; */
-  --primary-color-visited: black;
+  --primary-color-visited: #05676e;
   --secondary-color: #e0b354;
   --sun-0: #edc655;
   --sun-50: #fcffad;
@@ -171,6 +170,9 @@ button:hover, .button:hover, button:focus, .button:focus{
 #résumé-button_about{
   margin-bottom: 40px;
 }
+#résumé-button_about:visited{
+  color: black;
+}
 /* Hometown illustration */
 svg{
   margin-bottom: 30px;
@@ -263,6 +265,9 @@ figure {
 /* "Download my CV" button */
 #résumé-button_contact{
   align-self: flex-start;
+}
+#résumé-button_contact:visited{
+  color: black;
 }
 .contact-page__contact-me{
   margin-bottom: 30px;

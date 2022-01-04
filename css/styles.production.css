@@ -16,10 +16,6 @@ Secondary color(orange): #e0b354;
 */
 
 /* CSS variables*/
-/* :root{
-  --primary-color-visited: #05676e;
-}
-*/
 
 /* General */
 *{
@@ -126,7 +122,7 @@ a:active{
   color: #489c79;
 }
 a:visited{
-  color: black;
+  color: #05676e;
 }
 
 /* Buttons */
@@ -199,6 +195,9 @@ button:hover, .button:hover, button:focus, .button:focus{
 }
 #résumé-button_about{
   margin-bottom: 40px;
+}
+#résumé-button_about:visited{
+  color: black;
 }
 /* Hometown illustration */
 svg{
@@ -339,6 +338,9 @@ figure {
 #résumé-button_contact{
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+#résumé-button_contact:visited{
+  color: black;
 }
 .contact-page__contact-me{
   margin-bottom: 30px;
