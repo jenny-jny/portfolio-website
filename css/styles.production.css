@@ -126,7 +126,7 @@ a:active{
   color: #489c79;
 }
 a:visited{
-  color: --black;
+  color: black;
 }
 
 /* Buttons */
