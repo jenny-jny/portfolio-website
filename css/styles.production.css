@@ -190,8 +190,10 @@ button:hover, .button:hover, button:focus, .button:focus{
   color: #007acc;
 }
 /* About page and "Download my CV" button */
-.about, .button{
+.about, #résumé-button_about{
   text-align: center;
+}
+#résumé-button_about{
   margin-bottom: 40px;
 }
 /* Hometown illustration */
@@ -329,6 +331,11 @@ figure {
 }
 
 /* Contact page */
+/* "Download my CV" button */
+#résumé-button_contact{
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 .contact-page__contact-me{
   margin-bottom: 30px;
 }
