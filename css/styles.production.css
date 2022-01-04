@@ -16,6 +16,10 @@ Secondary color(orange): #e0b354;
 */
 
 /* CSS variables*/
+/* :root{
+  --primary-color-visited: #05676e;
+}
+*/
 
 /* General */
 *{
@@ -122,7 +126,7 @@ a:active{
   color: #489c79;
 }
 a:visited{
-  color: #05676e;
+  color: --black;
 }
 
 /* Buttons */
