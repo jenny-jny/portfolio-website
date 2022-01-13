@@ -191,10 +191,13 @@ button:hover, .button:hover, button:focus, .button:focus{
 }
 /* About page and "Download my CV" button */
 .about, #résumé-button_about{
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #résumé-button_about{
-  margin-bottom: 40px;
+  color: white;
+  margin-bottom: 16px;
 }
 #résumé-button_about:visited{
   color: black;
@@ -277,7 +280,7 @@ svg{
   -webkit-animation: 30s cloud-move-reverse infinite alternate linear;
           animation: 30s cloud-move-reverse infinite alternate linear;
 }
-/* Tables */
+/* Table */
 table{
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -336,6 +339,7 @@ figure {
 /* Contact page */
 /* "Download my CV" button */
 #résumé-button_contact{
+  color: white;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
