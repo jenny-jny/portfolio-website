@@ -214,9 +214,9 @@ svg{
   animation: 30s cloud-move-reverse infinite alternate linear;
 }
 /* Tables */
-table{
+table, .oca-badge{
   align-self: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 /* Work grid */
