@@ -213,8 +213,8 @@ svg{
 .cloud-back{
   animation: 30s cloud-move-reverse infinite alternate linear;
 }
-/* Tables */
-table, .oca-badge{
+/* Table */
+table{
   align-self: center;
   /* margin-bottom: 30px; */
 }
