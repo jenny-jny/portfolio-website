@@ -165,7 +165,6 @@ button:hover, .button:hover, button:focus, .button:focus{
 }
 /* About page and "Download my CV" button */
 .about, #résumé-button_about{
-  /* text-align: center; */
   align-items: center;
 }
 #résumé-button_about{
