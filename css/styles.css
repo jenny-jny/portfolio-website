@@ -168,6 +168,7 @@ button:hover, .button:hover, button:focus, .button:focus{
   align-items: center;
 }
 #résumé-button_about{
+  color: white;
   margin-bottom: 16px;
 }
 #résumé-button_about:visited{
@@ -264,6 +265,7 @@ figure {
 /* Contact page */
 /* "Download my CV" button */
 #résumé-button_contact{
+  color: white;
   align-self: flex-start;
 }
 #résumé-button_contact:visited{
